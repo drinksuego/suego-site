@@ -9,7 +9,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>suego — salt. lime. sparkling water.</title>
-<meta name="description" content="suego. salt, lime, sparkling water. a sparkling suero, made in california.">
+<meta name="description" content="suego. salt, lime, sparkling water. a sparkling suero, born in OC.">
 <meta name="theme-color" content="#FAF8F4">
 <meta property="og:type" content="website">
 <meta property="og:title" content="suego">
@@ -19,7 +19,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Newsreader:opsz,wght@6..72,300&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap">
 <link rel="preload" as="image" href="assets/hero-2000.webp" imagesrcset="assets/hero-1200.webp 1200w, assets/hero-2000.webp 2000w" imagesizes="100vw">
 <style>
   :root {
@@ -28,7 +28,6 @@
     --ink: #1C1C1A;
     --ink-2: #6E6B63;
     --rule: rgba(28, 28, 26, 0.12);
-    --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
     --sans: "Montserrat", -apple-system, "Helvetica Neue", Arial, sans-serif;
     --gut: clamp(20px, 4vw, 56px);
     --air: clamp(120px, 16vw, 240px);
@@ -47,7 +46,7 @@
   img { display: block; max-width: 100%; }
   a { color: inherit; text-decoration: none; }
   h1, h2, p, figure { margin: 0; }
-  h1, h2 { font-family: var(--serif); font-weight: 300; letter-spacing: -0.02em; text-wrap: balance; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   :focus-visible { outline: 1px solid currentColor; outline-offset: 4px; }
 
   .label { font: 500 11px/1.5 var(--sans); letter-spacing: 0.16em; color: var(--ink-2); }
@@ -69,7 +68,18 @@
   .hero img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
 
   .statement { padding: var(--air) var(--gut); text-align: center; }
-  .statement h1 { font-size: clamp(42px, 6.4vw, 104px); line-height: 1; margin: 28px auto; }
+  .headline {
+    display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+    column-gap: 0.336em;
+    margin: 32px auto;
+    font-size: min(100px, calc((100vw - 2 * var(--gut)) * 0.88 / 13.86));
+    font-weight: 400; line-height: 1;
+  }
+  .headline svg { display: block; height: 1.06em; width: auto; }
+  @media (max-width: 899px) {
+    .headline { flex-direction: column; font-size: min(72px, calc((100vw - 2 * var(--gut)) * 0.94 / 8.58)); }
+    .headline svg + svg { margin-top: -0.08em; }
+  }
 
   .site-footer {
     border-top: 1px solid var(--rule);
@@ -105,8 +115,12 @@
 
   <section class="statement" aria-labelledby="statement">
     <p class="label">no. 01 · lime</p>
-    <h1 id="statement">salt. lime. sparkling water.</h1>
-    <p class="label">a sparkling suero · made in california</p>
+    <h1 id="statement" class="headline">
+      <span class="sr-only">salt. lime. sparkling water.</span>
+      <svg viewBox="-18 -790 4946 1060" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="currentColor" stroke-width="36" stroke-linejoin="miter" d="M252 10C372 10 452 -50 452 -140C452 -255 346 -275 251 -291C157 -307 73 -321 73 -411C73 -487 143 -538 248 -538C354 -538 419 -488 425 -405H437C431 -495 360 -550 248 -550C137 -550 61 -494 61 -411C61 -311 155 -295 249 -279C344 -263 440 -245 440 -140C440 -57 366 -2 252 -2C140 -2 72 -53 62 -140H50C60 -46 133 10 252 10ZM878 10C1007 10 1106 -69 1139 -183V-2e-05H1151V-540H1139V-357C1106 -471 1007 -550 878 -550C722 -550 604 -429 604 -270C604 -111 722 10 878 10ZM878 -2C729 -2 616 -117 616 -270C616 -422 729 -538 878 -538C1029 -538 1139 -425 1139 -270C1139 -115 1029 -2 878 -2ZM1405 0H1417V-730H1405ZM1859 0H1928V-12H1859C1770 -12 1719 -65 1719 -155V-528H1923V-540H1719V-700H1707V-540H1582V-528H1707V-155C1707 -58 1764 0 1859 0ZM2054 0H2084V-46H2054ZM2639 0H2651V-730H2639ZM2905 0H2917V-540H2905ZM2896 -670H2926V-710H2896ZM3171 0H3183V-322C3184 -452 3262 -538 3380 -538C3480 -538 3546 -460 3546 -339V0H3558V-322C3559 -452 3637 -538 3755 -538C3854 -538 3921 -458 3921 -339L3922 0H3933V-339C3933 -466 3862 -550 3755 -550C3653 -550 3578 -488 3554 -390C3537 -488 3472 -550 3380 -550C3283 -550 3210 -494 3183 -404V-540H3171ZM4397 10C4505 10 4589 -45 4642 -150H4629C4582 -57 4500 -2 4397 -2C4252 -2 4141 -117 4140 -269H4660V-276C4660 -431 4549 -550 4397 -550C4244 -550 4128 -429 4128 -271C4128 -111 4244 10 4397 10ZM4140 -281C4145 -428 4254 -538 4397 -538C4536 -538 4644 -433 4648 -281ZM4812 0H4842V-46H4812Z"/></svg>
+      <svg viewBox="-18 -790 8576 1060" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="currentColor" stroke-width="36" stroke-linejoin="miter" d="M252 10C372 10 452 -50 452 -140C452 -255 346 -275 251 -291C157 -307 73 -321 73 -411C73 -487 143 -538 248 -538C354 -538 419 -488 425 -405H437C431 -495 360 -550 248 -550C137 -550 61 -494 61 -411C61 -311 155 -295 249 -279C344 -263 440 -245 440 -140C440 -57 366 -2 252 -2C140 -2 72 -53 62 -140H50C60 -46 133 10 252 10ZM928 10C1088 10 1201 -111 1201 -270C1201 -429 1088 -550 928 -550C801 -550 700 -470 666 -355V-540H654V190H666V-185C700 -70 801 10 928 10ZM928 -2C779 -2 666 -118 666 -270C666 -423 779 -538 928 -538C1079 -538 1189 -425 1189 -270C1189 -115 1079 -2 928 -2ZM1629 10C1758 10 1857 -69 1890 -183V-2e-05H1902V-540H1890V-357C1857 -471 1758 -550 1629 -550C1473 -550 1355 -429 1355 -270C1355 -111 1473 10 1629 10ZM1629 -2C1480 -2 1367 -117 1367 -270C1367 -422 1480 -538 1629 -538C1780 -538 1890 -425 1890 -270C1890 -115 1780 -2 1629 -2ZM2156 0H2168V-308C2168 -433 2251 -529 2369 -529H2415V-541H2369C2269 -541 2196 -480 2168 -391V-540H2156ZM2951 0H2967L2713 -282L2947 -540H2931L2702 -288H2593V-730H2581V0H2593V-276H2702ZM3122 0H3134V-730H3122ZM3388 0H3400V-540H3388ZM3379 -670H3409V-710H3379ZM4087 -318V0H4099V-318C4099 -460 4017 -550 3886 -550C3787 -550 3698 -482 3666 -392V-540H3654V0H3666V-322C3666 -437 3769 -538 3886 -538C4010 -538 4087 -454 4087 -318ZM4561 200C4718 200 4813 94 4813 -81V-540H4801V-368C4769 -476 4673 -550 4555 -550C4407 -550 4293 -435 4293 -285C4293 -134 4406 -20 4555 -20C4674 -20 4769 -93 4801 -201V-81C4801 88 4711 188 4561 188C4454 188 4375 136 4340 42H4328C4363 142 4445 200 4561 200ZM4555 -32C4413 -32 4305 -141 4305 -285C4305 -428 4413 -538 4555 -538C4696 -538 4801 -430 4801 -285C4801 -139 4697 -32 4555 -32ZM5499 0H5507L5701 -496L5897 0H5905L6099 -540H6086L5901 -23L5705 -519H5697L5503 -23L5325 -540H5312ZM6503 10C6632 10 6731 -69 6764 -183V-2e-05H6776V-540H6764V-357C6731 -471 6632 -550 6503 -550C6347 -550 6229 -429 6229 -270C6229 -111 6347 10 6503 10ZM6503 -2C6354 -2 6241 -117 6241 -270C6241 -422 6354 -538 6503 -538C6654 -538 6764 -425 6764 -270C6764 -115 6654 -2 6503 -2ZM7218 0H7287V-12H7218C7129 -12 7078 -65 7078 -155V-528H7282V-540H7078V-700H7066V-540H6941V-528H7066V-155C7066 -58 7123 0 7218 0ZM7658 10C7766 10 7850 -45 7903 -150H7890C7843 -57 7761 -2 7658 -2C7513 -2 7402 -117 7401 -269H7921V-276C7921 -431 7810 -550 7658 -550C7505 -550 7389 -429 7389 -271C7389 -111 7505 10 7658 10ZM7401 -281C7406 -428 7515 -538 7658 -538C7797 -538 7905 -433 7909 -281ZM8121 0H8133V-308C8133 -433 8216 -529 8334 -529H8380V-541H8334C8234 -541 8161 -480 8133 -391V-540H8121ZM8442 0H8472V-46H8442Z"/></svg>
+    </h1>
+    <p class="label">a sparkling suero · born in OC</p>
   </section>
 </main>
 
