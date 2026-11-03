@@ -2,523 +2,149 @@
 <html lang="en">
 <head>
 <!--
-  suego · landing page v3
-  rules: lowercase, editorial, customer-first. quiet type, plenty of air.
-  do not introduce: icons, badges, gradients, exclamation marks.
+  suego · landing page v4
+  the product does not need to explain itself.
+  rules: lowercase. few words. no sale language. no icons, badges, gradients, exclamation marks.
 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>suego — a sparkling suero. salt, lime, sparkling water.</title>
-<meta name="description" content="suego is a sparkling suero: salt, lime and sparkling water. 5 calories, less than a gram of sugar, zero alcohol. made in california.">
-<meta name="theme-color" content="#F5F2EA">
+<title>suego — salt. lime. sparkling water.</title>
+<meta name="description" content="suego. salt, lime, sparkling water. a sparkling suero, made in california.">
+<meta name="theme-color" content="#FAF8F4">
 <meta property="og:type" content="website">
-<meta property="og:title" content="suego — a sparkling suero">
-<meta property="og:description" content="salt. lime. sparkling water. that's it.">
+<meta property="og:title" content="suego">
+<meta property="og:description" content="salt. lime. sparkling water.">
 <meta property="og:image" content="https://drinksuego.com/assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap">
-<link rel="preload" as="image" href="assets/hero-2000.webp" imagesrcset="assets/hero-1200.webp 1200w, assets/hero-2000.webp 2000w" imagesizes="(min-width: 900px) 60vw, 100vw">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Newsreader:opsz,wght@6..72,300&display=swap">
+<link rel="preload" as="image" href="assets/hero-2000.webp" imagesrcset="assets/hero-1200.webp 1200w, assets/hero-2000.webp 2000w" imagesizes="100vw">
 <style>
   :root {
     color-scheme: light;
-    --paper: #F5F2EA;
-    --stone: #EBE6DA;
+    --paper: #FAF8F4;
     --ink: #1C1C1A;
-    --ink-2: #57554F;
-    --ink-3: #8C897F;
-    --rule: rgba(28, 28, 26, 0.14);
-    --green: #1F3A2E;
+    --ink-2: #6E6B63;
+    --rule: rgba(28, 28, 26, 0.12);
     --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
     --sans: "Montserrat", -apple-system, "Helvetica Neue", Arial, sans-serif;
-    --max: 1440px;
     --gut: clamp(20px, 4vw, 56px);
-    --gap: clamp(20px, 2.4vw, 40px);
-    --sec: clamp(96px, 11vw, 176px);
-    --bar: 64px;
+    --air: clamp(120px, 16vw, 240px);
   }
 
   *, *::before, *::after { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: var(--bar); }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  html { -webkit-text-size-adjust: 100%; }
   body {
     margin: 0;
     background: var(--paper);
     color: var(--ink);
-    font: 400 15px/1.7 var(--sans);
+    font: 500 11px/1.5 var(--sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   img { display: block; max-width: 100%; }
-  a { color: inherit; }
-  p, figure, blockquote, dl, dd, ol { margin: 0; }
-  h1, h2, h3 {
-    margin: 0;
-    font-family: var(--serif);
-    font-weight: 300;
-    letter-spacing: -0.02em;
-    text-wrap: balance;
-  }
-  h2 { font-size: clamp(34px, 3.8vw, 58px); line-height: 1.04; }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, p, figure { margin: 0; }
+  h1, h2 { font-family: var(--serif); font-weight: 300; letter-spacing: -0.02em; }
   :focus-visible { outline: 1px solid currentColor; outline-offset: 4px; }
 
-  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gut); }
-  .grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); }
-  .label {
-    font: 500 11px/1.5 var(--sans);
-    letter-spacing: 0.14em;
-    color: var(--ink-2);
-  }
-  .body { color: var(--ink-2); max-width: 50ch; }
-  .body + .body { margin-top: 1em; }
+  .label { font: 500 11px/1.5 var(--sans); letter-spacing: 0.16em; color: var(--ink-2); }
 
-  .button {
-    display: inline-flex; align-items: center; justify-content: center;
-    min-height: 50px; padding: 0 30px;
-    background: var(--ink); color: var(--paper);
-    font: 500 12.5px/1 var(--sans); letter-spacing: 0.06em;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  .button:hover { background: var(--green); }
-  .link {
-    font: 500 12.5px/1.4 var(--sans); letter-spacing: 0.06em;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 7px;
-    text-decoration-color: var(--rule);
-    transition: text-decoration-color 0.3s ease;
-  }
-  .link:hover { text-decoration-color: currentColor; }
-
-  /* ---------- header ---------- */
+  /* header sits on the sky of the hero photo */
   .site-header {
-    position: sticky; top: 0; z-index: 10;
-    background: var(--paper);
-    border-bottom: 1px solid var(--rule);
+    position: absolute; top: 0; left: 0; right: 0; z-index: 2;
+    display: flex; justify-content: center;
+    padding: 28px var(--gut);
   }
-  .bar { display: flex; align-items: center; justify-content: space-between; height: var(--bar); }
-  .wordmark {
-    font: 600 23px/1 var(--sans);
-    letter-spacing: -0.045em;
-    text-decoration: none;
-  }
-  .nav { display: flex; gap: clamp(20px, 3vw, 44px); }
-  .nav a {
-    font: 500 12.5px/1 var(--sans); letter-spacing: 0.06em;
-    text-decoration: none;
-    text-underline-offset: 7px; text-decoration-thickness: 1px;
-  }
-  .nav a:hover { text-decoration-line: underline; }
+  .wordmark { font: 600 24px/1 var(--sans); letter-spacing: -0.045em; }
 
-  /* ---------- hero ---------- */
   .hero {
-    display: grid;
-    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-    height: clamp(600px, calc(100svh - var(--bar)), 980px);
+    height: clamp(560px, 100svh, 1100px);
+    background: #E9E6DF;
+    overflow: hidden;
   }
-  .hero-text {
-    align-self: end;
-    padding: 0 var(--gut) clamp(48px, 6vw, 96px);
-    max-width: calc(620px + 2 * var(--gut));
-    width: 100%;
-    justify-self: end;
-  }
-  .hero h1 {
-    font-size: clamp(46px, 5.6vw, 92px);
-    line-height: 0.98;
-    margin: 24px 0 32px;
-  }
-  .lead {
-    font: 300 clamp(19px, 1.5vw, 22px)/1.5 var(--serif);
-    color: var(--ink-2);
-    max-width: 34ch;
-  }
-  .actions { display: flex; align-items: center; flex-wrap: wrap; gap: 20px 32px; margin-top: 44px; }
-  .hero-media { position: relative; overflow: hidden; background: var(--stone); }
-  .hero-media img {
-    position: absolute; inset: 0;
-    width: 100%; height: 100%;
-    object-fit: cover; object-position: 72% 50%;
-  }
+  .hero img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
 
-  /* ---------- sections ---------- */
-  .section { padding: var(--sec) 0; }
-  .section--rule { border-top: 1px solid var(--rule); }
+  .statement { padding: var(--air) var(--gut); text-align: center; }
+  .statement h1 { font-size: clamp(42px, 6.4vw, 104px); line-height: 1; margin: 28px auto; }
 
-  /* the drink */
-  .drink-copy { grid-column: 1 / span 6; }
-  .drink-copy h2 { margin: 22px 0 36px; max-width: 13ch; }
-  .formula { grid-column: 8 / span 5; align-self: end; border-top: 1px solid var(--ink); }
-  .formula-head {
-    display: flex; justify-content: space-between; gap: 16px;
-    padding: 14px 0; border-bottom: 1px solid var(--rule);
+  .bottles { padding: 0 var(--gut) var(--air); }
+  .bottles-media {
+    width: min(100%, 560px);
+    margin: 0 auto;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #E9E6DF;
   }
-  .ingredients { list-style: none; padding: 0; }
-  .ingredients li {
-    display: flex; align-items: baseline; gap: 28px;
-    padding: 20px 0; border-bottom: 1px solid var(--rule);
-    font: 300 clamp(24px, 2.2vw, 32px)/1.15 var(--serif);
-    letter-spacing: -0.015em;
+  .bottles-media img { width: 100%; height: 100%; object-fit: cover; }
+  .bottles-list {
+    display: flex; justify-content: center;
+    gap: clamp(64px, 12vw, 200px);
+    margin-top: clamp(48px, 6vw, 80px);
+    text-align: center;
   }
-  .ingredients li .label { width: 20px; flex: none; color: var(--ink-3); }
-  .facts {
-    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
-    border-bottom: 1px solid var(--rule);
-  }
-  .facts div { display: flex; flex-direction: column-reverse; gap: 10px; padding: 24px 12px 20px 0; }
-  .facts dd { font: 300 clamp(28px, 2.4vw, 36px)/1 var(--serif); letter-spacing: -0.02em; }
-  .formula-foot { margin-top: 14px; color: var(--ink-3); }
+  .bottles-list h2 { font-size: clamp(28px, 2.6vw, 40px); line-height: 1.1; margin-bottom: 10px; }
 
-  /* the lineup */
-  .lineup-media { grid-column: 1 / span 6; aspect-ratio: 4 / 5; overflow: hidden; background: var(--stone); }
-  .lineup-media img { width: 100%; height: 100%; object-fit: cover; }
-  .lineup-body { grid-column: 8 / span 5; align-self: center; }
-  .lineup-body h2 { margin: 22px 0 clamp(40px, 5vw, 64px); }
-  .product { padding: 30px 0 32px; border-top: 1px solid var(--rule); }
-  .product:last-of-type { border-bottom: 1px solid var(--rule); }
-  .product-top { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
-  .product h3 { font-size: clamp(30px, 2.6vw, 40px); line-height: 1.1; }
-  .price { font: 400 14px/1 var(--sans); white-space: nowrap; }
-  .product .label { margin: 8px 0 16px; }
-  .product .link { display: inline-block; margin-top: 20px; }
-  .shipping { margin-top: 24px; color: var(--ink-3); }
+  .site-footer {
+    border-top: 1px solid var(--rule);
+    padding: 32px var(--gut);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px 24px;
+  }
+  .site-footer a:hover { color: var(--ink); }
 
-  /* how to drink it */
-  .section-head { margin-bottom: clamp(56px, 7vw, 104px); }
-  .section-head h2 { margin-top: 22px; max-width: 16ch; }
-  .moments {
-    list-style: none; padding: 0;
-    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 56px var(--gap);
-  }
-  .moments li { border-top: 1px solid var(--ink); padding-top: 18px; }
-  .moments .num { display: block; color: var(--ink-3); margin-bottom: clamp(36px, 4vw, 64px); }
-  .moments h3 { font-size: clamp(24px, 2vw, 30px); line-height: 1.12; margin: 10px 0 16px; }
-  .moments .body { font-size: 14.5px; }
-  .gatherings { margin-top: clamp(72px, 9vw, 136px); padding-top: 22px; border-top: 1px solid var(--rule); }
-  .gatherings .label { grid-column: 1 / span 4; }
-  .gatherings-copy { grid-column: 5 / span 8; }
-  .gatherings-copy p { font: 300 clamp(22px, 2vw, 30px)/1.35 var(--serif); letter-spacing: -0.01em; max-width: 40ch; }
-  .gatherings-copy .link { display: inline-block; margin-top: 28px; }
-
-  /* reviews */
-  .reviews { background: var(--stone); }
-  .quotes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px var(--gap); margin-top: clamp(48px, 6vw, 88px); }
-  .quotes blockquote {
-    font: 300 clamp(26px, 2.7vw, 42px)/1.18 var(--serif);
-    letter-spacing: -0.015em;
-    text-indent: -0.42em;
-    max-width: 22ch;
-  }
-  .quotes figcaption { margin-top: 28px; }
-
-  /* subscribe */
-  .subscribe { background: var(--green); color: var(--paper); }
-  .subscribe .label { color: rgba(245, 242, 234, 0.7); }
-  .subscribe-title { grid-column: 1 / span 6; }
-  .subscribe-title h2 { font-size: clamp(56px, 7.4vw, 120px); line-height: 0.95; margin-top: 22px; }
-  .subscribe-copy { grid-column: 8 / span 5; align-self: end; }
-  .subscribe-copy p { font: 300 clamp(19px, 1.5vw, 22px)/1.5 var(--serif); color: rgba(245, 242, 234, 0.82); max-width: 36ch; }
-  .subscribe .button { margin-top: 40px; background: var(--paper); color: var(--green); }
-  .subscribe .button:hover { background: #fff; }
-
-  /* questions */
-  .faq-head { grid-column: 1 / span 4; }
-  .faq-head h2 { margin-top: 22px; }
-  .faq-list { grid-column: 6 / span 7; border-bottom: 1px solid var(--rule); }
-  details { border-top: 1px solid var(--rule); }
-  summary {
-    list-style: none; cursor: pointer;
-    display: flex; justify-content: space-between; align-items: baseline; gap: 24px;
-    padding: 26px 0;
-    font: 300 clamp(20px, 1.7vw, 25px)/1.3 var(--serif);
-    letter-spacing: -0.01em;
-  }
-  summary::-webkit-details-marker { display: none; }
-  summary::after {
-    content: "+"; flex: none;
-    font: 300 22px/1 var(--sans); color: var(--ink-3);
-    transition: transform 0.3s ease;
-  }
-  details[open] summary::after { transform: rotate(45deg); }
-  details .body { padding: 0 0 30px; }
-
-  /* footer */
-  .site-footer { border-top: 1px solid var(--rule); padding: clamp(64px, 8vw, 112px) 0 28px; }
-  .foot-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 48px; flex-wrap: wrap; }
-  .foot-tag { font: 300 clamp(22px, 2vw, 28px)/1.3 var(--serif); letter-spacing: -0.01em; max-width: 22ch; }
-  .foot-links { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, auto); gap: 14px 64px; }
-  .foot-links a { font: 500 12.5px/1.4 var(--sans); letter-spacing: 0.06em; text-decoration: none; }
-  .foot-links a:hover { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
-  .foot-bottom {
-    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px;
-    margin-top: clamp(72px, 9vw, 128px); padding-top: 20px; border-top: 1px solid var(--rule);
-  }
-  .foot-bottom a { text-decoration: none; }
-
-  /* ---------- responsive ---------- */
-  @media (max-width: 1023px) {
-    .moments { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  }
-  @media (max-width: 899px) {
-    .hero { grid-template-columns: 1fr; height: auto; }
-    .hero-media { order: -1; aspect-ratio: 4 / 5; max-height: 78svh; }
-    .hero-text { justify-self: start; padding: 44px var(--gut) 72px; }
-    .hero h1 { margin: 20px 0 24px; }
-    .actions { margin-top: 36px; }
-    .drink-copy, .formula, .lineup-media, .lineup-body,
-    .subscribe-title, .subscribe-copy, .faq-head, .faq-list,
-    .gatherings .label, .gatherings-copy { grid-column: 1 / -1; }
-    .formula { margin-top: 64px; }
-    .lineup-body { margin-top: 56px; }
-    .gatherings-copy { margin-top: 20px; }
-    .subscribe-copy { margin-top: 40px; }
-    .faq-list { margin-top: 48px; }
-    .quotes { grid-template-columns: 1fr; }
-  }
-  @media (max-width: 599px) {
-    body { font-size: 14.5px; }
-    .nav { gap: 18px; }
-    .moments { grid-template-columns: 1fr; gap: 48px; }
-    .moments .num { margin-bottom: 24px; }
-    .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .facts div:nth-child(-n+2) { border-bottom: 1px solid var(--rule); }
-    .foot-links { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; width: 100%; }
+  @media (max-width: 699px) {
+    .hero { height: min(100svh, 880px); }
+    .hero img { object-position: 76% 50%; }
+    .site-footer { justify-content: center; text-align: center; flex-direction: column; }
   }
 </style>
 </head>
 <body>
 
 <header class="site-header">
-  <div class="wrap bar">
-    <a class="wordmark" href="#top" aria-label="suego, back to top">suego</a>
-    <nav class="nav" aria-label="primary">
-      <a href="#drink">the drink</a>
-      <a href="#lineup">shop</a>
-      <a href="#subscribe">subscribe</a>
-    </nav>
-  </div>
+  <a class="wordmark" href="/" aria-label="suego">suego</a>
 </header>
 
-<main id="top">
+<main>
+  <figure class="hero">
+    <img
+      src="assets/hero-2000.webp"
+      srcset="assets/hero-1200.webp 1200w, assets/hero-2000.webp 2000w"
+      sizes="100vw"
+      width="2000" height="1493"
+      alt="a bottle of suego on a weathered wooden table above the ocean, late afternoon light"
+      fetchpriority="high">
+  </figure>
 
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="hero-text">
-      <p class="label">no. 01 · lime · made in california</p>
-      <h1 id="hero-title">salt. lime. sparkling water. that’s it.</h1>
-      <p class="lead">a sparkling suero — clean, lightly salted, barely sweet. rooted in a centuries-old Latin tradition, made for the table, the morning, and the days worth keeping.</p>
-      <div class="actions">
-        <a class="button" href="#lineup">shop suego</a>
-        <a class="link" href="#drink">about the drink</a>
-      </div>
-    </div>
-    <figure class="hero-media">
-      <img
-        src="assets/hero-2000.webp"
-        srcset="assets/hero-1200.webp 1200w, assets/hero-2000.webp 2000w"
-        sizes="(min-width: 900px) 60vw, 100vw"
-        width="2000" height="1493"
-        alt="a bottle of suego on a weathered wooden table above the ocean, late afternoon light"
-        fetchpriority="high">
+  <section class="statement" aria-labelledby="statement">
+    <p class="label">no. 01 · lime</p>
+    <h1 id="statement">salt. lime. sparkling water.</h1>
+    <p class="label">a sparkling suero · made in california</p>
+  </section>
+
+  <section class="bottles" aria-label="the bottles">
+    <figure class="bottles-media">
+      <img src="assets/still-life-1024.webp" width="1024" height="1024" loading="lazy"
+           alt="a suego bottle on linen against a plaster wall, afternoon light">
     </figure>
-  </section>
-
-  <section id="drink" class="section" aria-labelledby="drink-title">
-    <div class="wrap grid">
-      <div class="drink-copy">
-        <p class="label">the drink</p>
-        <h2 id="drink-title">three ingredients that shouldn’t taste this good.</h2>
-        <p class="body">suero, from the Latin for serum — a restorative drink that’s been around a long time and will be around longer. the kind of thing a grandmother in Mexico might make for a sick kid, or a host might pour at the start of a long dinner.</p>
-        <p class="body">the salt cuts the lime’s bitterness. the lime cuts the salt’s edge. it tastes clean, a little surprising, a little familiar. people drink it instead of a cocktail, instead of a sparkling water, instead of a coconut water.</p>
+    <div class="bottles-list">
+      <div>
+        <h2>the 12</h2>
+        <p class="label">12 oz</p>
       </div>
-
-      <aside class="formula" aria-label="formula">
-        <div class="formula-head label">
-          <span>formula</span>
-          <span>no. 01 · lime</span>
-        </div>
-        <ol class="ingredients">
-          <li><span class="label">01</span>sparkling water</li>
-          <li><span class="label">02</span>fresh lime</li>
-          <li><span class="label">03</span>a pinch of sea salt</li>
-        </ol>
-        <dl class="facts">
-          <div><dt class="label">calories</dt><dd>5</dd></div>
-          <div><dt class="label">sugar</dt><dd>&lt;1g</dd></div>
-          <div><dt class="label">alcohol</dt><dd>0</dd></div>
-          <div><dt class="label">caffeine</dt><dd>0</dd></div>
-        </dl>
-        <p class="label formula-foot">per bottle</p>
-      </aside>
-    </div>
-  </section>
-
-  <section id="lineup" class="section section--rule" aria-labelledby="lineup-title">
-    <div class="wrap grid">
-      <figure class="lineup-media">
-        <img src="assets/still-life-1024.webp" width="1024" height="1024" loading="lazy"
-             alt="a suego bottle on linen against a plaster wall, afternoon light">
-      </figure>
-
-      <div class="lineup-body">
-        <p class="label">the lineup</p>
-        <h2 id="lineup-title">two sizes. one drink.</h2>
-
-        <article class="product">
-          <div class="product-top">
-            <h3>the 12</h3>
-            <p class="price">from $54</p>
-          </div>
-          <p class="label">12 oz · everyday · 12-pack</p>
-          <p class="body">the every-afternoon bottle. fits in your hand, your bag, the door of the fridge. the one you’ll reach for between meetings and after the workout.</p>
-          <a class="link" href="#">shop the 12</a>
-        </article>
-
-        <article class="product">
-          <div class="product-top">
-            <h3>the 750</h3>
-            <p class="price">from $18</p>
-          </div>
-          <p class="label">750 ml · the dinner bottle · single or 6-pack ($96)</p>
-          <p class="body">the wine of suero. open it at dinner. pour it into a glass. it earns its place on the table next to the bread.</p>
-          <a class="link" href="#">shop the 750</a>
-        </article>
-
-        <p class="label shipping">free shipping over $40 · ships from california in 2–4 days</p>
+      <div>
+        <h2>the 750</h2>
+        <p class="label">750 ml</p>
       </div>
     </div>
   </section>
-
-  <section id="how" class="section section--rule" aria-labelledby="how-title">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="label">how to drink it</p>
-        <h2 id="how-title">four good moments for a suego.</h2>
-      </div>
-
-      <ol class="moments">
-        <li>
-          <span class="label num">01</span>
-          <p class="label">the dinner</p>
-          <h3>open the 750 at the start.</h3>
-          <p class="body">it does what a wine does — it tells the table the meal is starting — without doing what a wine does the next morning.</p>
-        </li>
-        <li>
-          <span class="label num">02</span>
-          <p class="label">the morning</p>
-          <h3>after the swim, the walk, the workout.</h3>
-          <p class="body">salt, lime and bubbles. no sugar crash. no caffeine. the kind of thing your body asks for before your head knows it.</p>
-        </li>
-        <li>
-          <span class="label num">03</span>
-          <p class="label">the host gift</p>
-          <h3>bring a 750 the way you’d bring a wine.</h3>
-          <p class="body">better if your host doesn’t drink. even better if they do. it sits on the counter, it pours into a glass, it gets remembered.</p>
-        </li>
-        <li>
-          <span class="label num">04</span>
-          <p class="label">the everyday</p>
-          <h3>the 12 lives in the fridge.</h3>
-          <p class="body">between meetings. after the gym. when you want something a little more interesting than bubbles in a can.</p>
-        </li>
-      </ol>
-
-      <div class="gatherings grid">
-        <p class="label">gatherings</p>
-        <div class="gatherings-copy">
-          <p>we don’t sponsor events. we show up to them. crystal cove swims on wednesday mornings at 6am. steaks and suegos on friday nights in long beach. open to anyone — the drink is already there.</p>
-          <a class="link" href="#">see the calendar</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="reviews" class="section reviews" aria-labelledby="reviews-title">
-    <div class="wrap">
-      <p class="label" id="reviews-title">reviews · 4.9 / 5 from 312 people</p>
-      <div class="quotes">
-        <figure>
-          <blockquote>“tastes like a grown-up version of something my abuela used to make.”</blockquote>
-          <figcaption class="label">diego r., san diego</figcaption>
-        </figure>
-        <figure>
-          <blockquote>“i ordered it because the bottle is beautiful. i kept ordering because it actually tastes good.”</blockquote>
-          <figcaption class="label">priya s., los angeles</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section id="subscribe" class="section subscribe" aria-labelledby="subscribe-title">
-    <div class="wrap grid">
-      <div class="subscribe-title">
-        <p class="label">subscribe</p>
-        <h2 id="subscribe-title">the rhythm.</h2>
-      </div>
-      <div class="subscribe-copy">
-        <p>a 12-pack a month, a 6-pack every other week, or a single 750 for the table. cancel anytime. free shipping over $40.</p>
-        <a class="button" href="#">start a subscription</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="questions" class="section" aria-labelledby="questions-title">
-    <div class="wrap grid">
-      <div class="faq-head">
-        <p class="label">questions</p>
-        <h2 id="questions-title">the things people ask.</h2>
-      </div>
-      <div class="faq-list">
-        <details>
-          <summary>what does it taste like?</summary>
-          <p class="body">clean, a little salty, a little tart, not very sweet, lightly sparkling. closer to a topo chico with a squeeze of lime than to a la croix. tastes like itself after about two sips.</p>
-        </details>
-        <details>
-          <summary>is it sweet?</summary>
-          <p class="body">barely. less than a gram of sugar per bottle. the sweetness comes from a tiny bit of organic cane and the lime — not from any kind of artificial sweetener, stevia, or monk fruit.</p>
-        </details>
-        <details>
-          <summary>is it actually salty?</summary>
-          <p class="body">yes, lightly. about a quarter of the sodium of a typical sports drink. enough that you can taste it. it’s the salt that makes it interesting.</p>
-        </details>
-        <details>
-          <summary>does it have caffeine or alcohol?</summary>
-          <p class="body">neither.</p>
-        </details>
-        <details>
-          <summary>how is it different from other sparkling drinks?</summary>
-          <p class="body">la croix and topo chico are flavored sparkling waters. olipop is a functional soda. liquid death is canned water with personality. suego is none of those — it’s a sparkling suero, with real lime and real salt, rooted in a centuries-old drink. it tastes like itself.</p>
-        </details>
-        <details>
-          <summary>where do you ship?</summary>
-          <p class="body">anywhere in the continental U.S. free over $40. ships in 2–4 days from california.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="foot-top">
-      <p class="foot-tag">sparkling suero. salt, lime, sparkling water. made for the table.</p>
-      <ul class="foot-links">
-        <li><a href="#lineup">shop</a></li>
-        <li><a href="#">wholesale</a></li>
-        <li><a href="#subscribe">subscribe</a></li>
-        <li><a href="#">instagram</a></li>
-        <li><a href="#drink">the drink</a></li>
-        <li><a href="mailto:hello@drinksuego.com">contact</a></li>
-      </ul>
-    </div>
-    <div class="foot-bottom label">
-      <span>© 2026 suego · be the salt.</span>
-      <a href="mailto:hello@drinksuego.com">hello@drinksuego.com</a>
-    </div>
-  </div>
+<footer class="site-footer label">
+  <span>© 2026 suego</span>
+  <a href="mailto:hello@drinksuego.com">hello@drinksuego.com</a>
 </footer>
 
 </body>
