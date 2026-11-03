@@ -77,6 +77,7 @@
     display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px 24px;
   }
   .site-footer a:hover { color: var(--ink); }
+  .foot-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 32px; }
 
   @media (max-width: 699px) {
     .hero { height: min(100svh, 880px); }
@@ -111,7 +112,10 @@
 
 <footer class="site-footer label">
   <span>© 2026 suego · be the salt.</span>
-  <a href="mailto:hello@drinksuego.com">hello@drinksuego.com</a>
+  <nav class="foot-links" aria-label="elsewhere">
+    <a href="https://www.instagram.com/drinksuego/">instagram</a>
+    <a href="mailto:hello@drinksuego.com">hello@drinksuego.com</a>
+  </nav>
 </footer>
 
 </body>
